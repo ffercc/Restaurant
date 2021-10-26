@@ -1,10 +1,49 @@
+html {
+	font-family: "sans-serif";
+	background-color: aliceblue;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
 #header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 50px;
-	background-color: aliceblue;
+	gap: 20px;
+}
+
+h1 {
+	font-size: 64px;
+	font-family: "fangsong";
+	padding: 10px;
+	border: 6px solid black;
+	background-color: antiquewhite;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+
+h3 {
+	font-size: 24px;
+	margin: 0px;
+}
+
+p {
+	font-size: 16px;
+	margin: 0px;
 }
 
 #tabList {
@@ -13,40 +52,104 @@
 	justify-content: center;
 	align-items: center;
 	gap: 1px;
-	background-color: aliceblue;
+
 }
 
 .tab {
-	text-align: center;
-	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
 	width: 200px;
-	height: 28px;
+	height: 40px;
 	margin: 0px 0px;
 	padding: 0px;
-	background-color: aliceblue;
 	border: 2px solid black;
 	border-collapse: collapse;
+	background-color: bisque;
+	cursor: pointer;
 }
 
 .tab:hover {
 	text-align: center;
-	font-size: 26px;
+	font-size: 36px;
 	width: 200px;
-	height: 28px;
+	height: 40px;
 	margin: 0px 0px;
 	padding: 0px;
-	background-color: cyan;
+	background-color: darkorange;
 	border: 2px solid black;
 	border-collapse: collapse;
 }
 
+.dish {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 10px;
+	border: 4px solid white;
+	width: 600px;
+	height: 500px;
+	font-family: "fangsong";
+	padding: 15px;
+	background-color: antiquewhite;
+}
 
-#content {
+#frontImage {
+	width: 800px;
+	height: 600px;
+}
+
+.dishImage {
+	width: 600px;
+	height: 400px;
+}
+
+.text1 {
+	font-size: 32px;
+	margin: 0px;
+	padding: 10px;
+}
+
+.text2 {
+	font-size: 32px;
+	padding: 10px;
+}
+
+.contactpage {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	width: 800px;
+	height: 800px;
+	margin: 0px 0px;
+	padding: 5px;
+}
+
+.phone.contactpage {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 50px;
-	background-color: aliceblue;
+	gap: 2px;
+	width: 400px;
+	height: 50px;
 }
 
+.address.contactpage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	width: 400px;
+	height: 50px;
+}
+
+.contactpage p {
+	font-family: "sans-serif";
+	font-size: 24px;
+}
