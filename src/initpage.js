@@ -8,9 +8,10 @@ export function showInitPage() {
 	text1Div.className = "text1";
 	text1Div.innerText = "Welcome to Pun Restaurant!";
 	
-	let imageDiv = document.createElement("image");
+	let imageDiv = document.createElement("img");
 	imageDiv.id = "frontImage";
-	imageDiv.src = "./images/frontimage.jpeg";
+	imageDiv.setAttribute("src", "./images/frontimage.jpeg");
+	imageDiv.setAttribute("alt", "frontimage");
 	
 	let text2Div = document.createElement("div");
 	text2Div.className = "text2";

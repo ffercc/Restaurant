@@ -5,33 +5,33 @@ export function showMenuPage() {
 	let menu = [];
 	menu.push(Dish(
 			"Lettuce us celebrate!",
-			"Lettuce us celebrate!",
+			"Your classical salad.",
 			"10.50€",
-			"./images/lettucecelebrate.jpeg"
+			"./images/lettucecelebrate_600x400.jpeg"
 	));
 	menu.push(Dish(
 			"Nice to meat you.",
-			"Nice to meat you.",
+			"Straight from the slaughterhouse.",
 			"16.00€",
-			"./images/nicetomeatyou.jpeg"
+			"./images/nicetomeatyou_600x400.jpeg"
 	));
 	menu.push(Dish(
 			"Pasta la vista, baby!",
-			"Pasta la vista, baby!",
+			"A filling dish of spaghetti.",
 			"13.50€",
-			"./images/pastalavista.jpeg"
+			"./images/pastalavista_600x400.jpeg"
 	));
 	menu.push(Dish(
 			"Don’t go bacon my heart.",
-			"Don’t go bacon my heart.",
+			"Pizza with bacon galore.",
 			"14.50€",
-			"./images/dontgobaconmyheart.jpeg"
+			"./images/dontgobaconmyheart_600x400.jpeg"
 	));
 	menu.push(Dish(
 			"Let’s give ’em something to taco ’bout",
-			"Let’s give ’em something to taco ’bout",
+			"Delicious mexican tacos.",
 			"13.00€",
-			"./images/letsgivethemsomethingtotacoabout.jpeg"
+			"./images/letsgivethemsomethingtotacoabout_600X400.jpeg"
 	));
 	
 	menu.forEach((item, index, menu) => {
@@ -59,13 +59,15 @@ function createDishDiv(dish) {
 	priceDiv.className = "dishPrice";
 	priceDiv.innerText = dish.getPrice();
 	
-	let imageDiv = document.createElement("image");
+	let imageDiv = document.createElement("img");
 	imageDiv.className = "dishImage";
-	imageDiv.src = dish.getImageurl();
+	imageDiv.setAttribute("src", dish.getImageurl());
+	imageDiv.setAttribute("alt", dish.getTitle());
 	
 	dishDiv.appendChild(titleDiv);
 	dishDiv.appendChild(descriptionDiv);
 	dishDiv.appendChild(priceDiv);
+	dishDiv.appendChild(imageDiv);
 	
 	return dishDiv;
 	

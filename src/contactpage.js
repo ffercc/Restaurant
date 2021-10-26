@@ -4,20 +4,28 @@ export function showContactPage() {
 	
 	let contentDiv = document.getElementById("content");
 	
+	let containerDiv = document.createElement("div");
+	containerDiv.className = "contactpage";
+	
 	let phoneDiv = document.createElement("div");
-	phoneDiv.className = "phone";
-	phoneDiv.innerText = "36 24 36 Call!";
+	phoneDiv.className = "contactpage phone";
+	phoneDiv.innerHTML = "<p><i class='fa fa-phone'></i> PHONE:</p><p>36 24 36 Call!</p>";
+	
 	
 	let locationDiv = document.createElement("p");
-	locationDiv.className = "locationText";
-	locationDiv.innerText = "67 Overhill Road in East Dulwich"
+	locationDiv.className = "contactpage address";
+	locationDiv.innerHTML = "<p><i class='fa fa-address-card'></i> ADDRESS:</p><p>67 Overhill Road in East Dulwich</p>"
 	
-	let locationImage = document.createElement("image");
-	locationImage.id = "locationMap";
-	locationImage.src = "./images/location.png";
+	let locationImage = document.createElement("img");
+	locationImage.id = "contactpage locationMap";
+	locationImage.setAttribute("src", "./images/location_800X600.png");
+	locationImage.setAttribute("alt", "location");
 	
-	contentDiv.appendChild(phoneDiv);
-	contentDiv.appendChild(locationDiv);
-	contentDiv.appendChild(locationImage);
+	
+	containerDiv.appendChild(phoneDiv);
+	containerDiv.appendChild(locationDiv);
+	containerDiv.appendChild(locationImage);
+	
+	contentDiv.appendChild(containerDiv);
 	
 }

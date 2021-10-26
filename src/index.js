@@ -37,6 +37,23 @@ function createHeader() {
 	
 }
 
+function changeTabStyle(currentTab) {
+	
+	let tabs = document.getElementsByClassName("tab");
+	[...tabs].forEach((element, index, array) => {
+		element.style.color = "";
+		element.style.backgroundColor = "";
+		element.style.textDecoration = "";
+	});
+
+	let tab = document.getElementById("tab" + currentTab);
+	tab.style = "color: blue; \
+			background-color: coral;\
+			text-decoration: underline; \
+			";
+
+}
+
 function delContent() {
 	let contentDiv = document.getElementById("content");
 	contentDiv.innerHTML = "";
@@ -64,6 +81,8 @@ function checkTab() {
 	default:
 		break;
 	}
+	
+	changeTabStyle(currentTab);
 }
 
 
