@@ -112,9 +112,11 @@ function addListeners() {
 /** Main **/ 
 createHeader();
 
-let currentTab = parseInt(localStorage.getItem("currentTab"));
+let currentTab = localStorage.getItem("currentTab");
 if (currentTab === null) {
 	currentTab = 1;
+} else {
+	currentTab = parseInt(currentTab);
 }
 checkTab();
 addListeners();
