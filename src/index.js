@@ -81,8 +81,8 @@ function checkTab() {
 	default:
 		break;
 	}
-	
 	changeTabStyle(currentTab);
+	localStorage.setItem("currentTab", currentTab);
 }
 
 
@@ -92,37 +92,29 @@ function checkTab() {
 function addListeners() {
 	let tab1Div = document.getElementById("tab1");
 	tab1Div.addEventListener("click", () => {
-		if (currentTab == 1) {
-			return;
-		} else {
-			currentTab = 1;
-			checkTab();
-		}
+		currentTab = 1;
+		checkTab();
 	});
 
 	let tab2Div = document.getElementById("tab2");
 	tab2Div.addEventListener("click", () => {
-		if (currentTab == 2) {
-			return;
-		} else {
-			currentTab = 2;
-			checkTab();
-		}
+		currentTab = 2;
+		checkTab();
 	});
 
 	let tab3Div = document.getElementById("tab3");
 	tab3Div.addEventListener("click", () => {
-		if (currentTab == 3) {
-			return;
-		} else {
-			currentTab = 3;
-			checkTab();
-		}
+		currentTab = 3;
+		checkTab();
 	});
 }
 
 /** Main **/ 
 createHeader();
-let currentTab = 1;
+
+let currentTab = parseInt(localStorage.getItem("currentTab"));
+if (currentTab === null) {
+	currentTab = 1;
+}
 checkTab();
 addListeners();
