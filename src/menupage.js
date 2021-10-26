@@ -4,7 +4,7 @@ export function showMenuPage() {
 	
 	let menu = [];
 	menu.push(Dish(
-			"Lettuce us celebrate!",
+			"Lettuce celebrate!",
 			"Your classical salad.",
 			"10.50€",
 			"./images/lettucecelebrate_600x400.jpeg"
